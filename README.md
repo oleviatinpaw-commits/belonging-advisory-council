@@ -5,32 +5,67 @@ An independent, student-run companion site for the Belonging Advisory Council (B
 ## Structure
 
 ```
-index.html          Home page
-about.html           Mission statement + the 4 task forces
-members.html         2025-26 member roster
-get-involved.html    How to join, application link, contact
-assets/css/style.css Shared styling
-assets/js/main.js    Mobile nav toggle
-assets/img/          Put member headshots or a logo here
+index.html            Home page
+about.html            Mission statement + the 4 task forces
+members.html          Task force leaders + members (clickable profiles)
+projects.html         Projects & Impact portfolio, filterable by task force
+get-involved.html     How to join, application link, contact
+
+assets/js/data.js     >>> ALL member and project content lives here <<<
+assets/js/members.js  Renders the members page + profile modal from data.js
+assets/js/projects.js Renders the projects page from data.js
+assets/js/main.js     Mobile nav toggle
+assets/css/style.css  Shared styling
+assets/img/           Put member headshots, logos, or project images here
 ```
 
 ## Editing content
 
-Every page is plain HTML — open any `.html` file in a text editor and change the text directly.
+**Members and projects** are both defined in one file: `assets/js/data.js`. Edit it in any text editor. The Members page and the Projects page both read from it, so a change shows up everywhere.
 
-**To update the member list** (`members.html`): each member is one block that looks like this —
+Each member looks like this:
 
-```html
-<div class="member-card">
-  <div class="avatar">CB</div>
-  <div class="member-name">Calebta Badu</div>
-  <div class="member-meta">Accounting &middot; Class of 2028</div>
-</div>
+```js
+{
+  id: "calebta-badu",            // unique, no spaces — used in links
+  name: "Calebta Badu",
+  initials: "CB",
+  major: "Accounting",
+  year: 2028,
+  taskForce: "engage",           // intl | engage | alumni | career
+  leader: true,                  // true = shows in "Task Force Leaders" section
+  role: "Lead, Student Engagement & Resources Task Force",
+  bio: "One short paragraph...",
+  photo: null,                   // or "assets/img/calebta.jpg"
+  placeholder: true              // remove (or set false) once the bio is real
+},
 ```
 
-Copy/paste a block to add a member, edit the initials/name/major/year to update one, or delete a block to remove one.
+- **Add a member**: copy a block, paste it in the list, change every field.
+- **Promote someone to leader**: set `leader: true` and update `role`.
+- **Add a headshot**: drop the image in `assets/img/` and set `photo: "assets/img/filename.jpg"`.
+- **Remove a member**: delete their block (and remove their `id` from any project `team` lists).
 
-**To add a real photo** instead of the initials circle: drop the image in `assets/img/`, then replace `<div class="avatar">CB</div>` with `<img src="assets/img/yourfile.jpg" alt="Name" style="width:56px;height:56px;border-radius:50%;object-fit:cover;">`.
+Each project looks like this:
+
+```js
+{
+  id: "belonging-resource-hub",
+  title: "Belonging Resource Hub",
+  taskForce: "engage",
+  term: "Spring 2026",
+  status: "In progress",         // "Completed" | "In progress" | "Planned"
+  summary: "What the project is...",
+  impact: "60+ resources catalogued",   // short headline number; or ""
+  team: ["calebta-badu", "lauren-tran"], // member ids — builds each member's project list
+  deck: null,                    // or a URL to a presentation
+  sample: true                   // remove once this is a real project
+},
+```
+
+A member's "Projects" list in their profile is built automatically from the `team` arrays, so keep those accurate.
+
+**Everything else** (mission text, task force descriptions, the impact numbers on the Projects page) is plain HTML — open the `.html` file and change the text directly.
 
 ## Previewing locally
 

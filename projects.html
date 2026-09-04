@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Members | Belonging Advisory Council</title>
-<meta name="description" content="Meet the 2025-26 task force leaders and members of the Belonging Advisory Council at the Robert H. Smith School of Business.">
+<title>Projects &amp; Impact | Belonging Advisory Council</title>
+<meta name="description" content="Projects and initiatives from the Belonging Advisory Council's four task forces at the Robert H. Smith School of Business.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,8 +22,8 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About &amp; Task Forces</a></li>
-      <li><a href="members.html" class="active">Members</a></li>
-      <li><a href="projects.html">Projects &amp; Impact</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="projects.html" class="active">Projects &amp; Impact</a></li>
       <li><a href="get-involved.html">Get Involved</a></li>
       <li><a href="get-involved.html#apply" class="nav-cta">Apply</a></li>
     </ul>
@@ -32,46 +32,64 @@
 
 <div class="page-hero">
   <div class="container">
-    <span class="eyebrow" style="color:#ff6b7d;">2025&ndash;26 Term</span>
-    <h1>Meet the council.</h1>
-    <p>Twelve students from across Smith's undergraduate and graduate programs, representing six majors and every class year. Click any member to see their profile and projects.</p>
+    <span class="eyebrow" style="color:#ff6b7d;">Our Work</span>
+    <h1>Projects &amp; impact.</h1>
+    <p>What the council's four task forces have built, what's underway, and what's next. Every project links back to the members who led it.</p>
   </div>
+</div>
+
+<div class="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">8</div>
+      <div class="stat-label">Projects to date</div>
+    </div>
+    <div>
+      <div class="stat-num">400+</div>
+      <div class="stat-label">Students reached</div>
+    </div>
+    <div>
+      <div class="stat-num">15</div>
+      <div class="stat-label">Alumni engaged</div>
+    </div>
+    <div>
+      <div class="stat-num">4</div>
+      <div class="stat-label">Task forces active</div>
+    </div>
+  </div>
+  <p class="stats-caption">Sample figures for layout &mdash; replace with real numbers in <code>projects.html</code>.</p>
 </div>
 
 <section>
   <div class="container">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Leadership</span>
-        <h2>Task force leaders</h2>
-        <p class="lede" style="margin:0;">Each of the council's four task forces is led by a council member who sets its priorities and coordinates its projects.</p>
+        <span class="eyebrow">Portfolio</span>
+        <h2>All projects</h2>
       </div>
+      <span class="member-meta" id="project-count"></span>
     </div>
-    <div class="members-grid" id="leaders-grid"></div>
+    <div class="filters" id="project-filters"></div>
+    <div class="proj-grid" id="projects-grid"></div>
   </div>
 </section>
 
-<section class="section-alt">
+<section class="section-alt section-tight">
   <div class="container">
-    <div class="section-head">
+    <div class="split">
       <div>
-        <span class="eyebrow">Council</span>
-        <h2>Council members</h2>
+        <span class="eyebrow">How Projects Happen</span>
+        <h2>From student feedback to finished initiative.</h2>
+        <p>Every project starts with something students tell the council &mdash; in surveys, at info sessions, or by email. A task force scopes the idea, proposes it to the full council, and carries it through to launch. Completed projects are documented here so the next council can build on them.</p>
       </div>
-    </div>
-    <div class="members-grid" id="members-grid"></div>
-
-    <div class="members-note">
-      <strong>Note for council members:</strong> this roster reflects the 2025&ndash;26 term as published on the official Smith School page. Bios are placeholders pending each member's review. To edit a name, bio, photo, task force, or leadership role, update <code>assets/js/data.js</code> &mdash; see the README for instructions.
+      <div class="info-box">
+        <h3>Have an idea for a project?</h3>
+        <p>You don't need to be a council member to propose one. Send a short description of the problem you've noticed and we'll route it to the right task force.</p>
+        <a href="mailto:smithbac@umd.edu?subject=Project%20idea%20for%20the%20BAC" class="btn btn-primary">Email a project idea</a>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="cta-banner">
-  <h2>Ready to add your name to this list?</h2>
-  <p>Applications for the Belonging Advisory Council open each semester.</p>
-  <a href="get-involved.html" class="btn btn-secondary">Apply to join &rarr;</a>
-</div>
 
 <footer class="site-footer">
   <div class="footer-grid">
@@ -102,13 +120,8 @@
   </div>
 </footer>
 
-<!-- Member profile modal (filled in by members.js) -->
-<div class="modal-backdrop" id="member-modal" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
-</div>
-
 <script src="assets/js/main.js"></script>
 <script src="assets/js/data.js"></script>
-<script src="assets/js/members.js"></script>
+<script src="assets/js/projects.js"></script>
 </body>
 </html>
