@@ -78,6 +78,7 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
+
 ## Hosting on GitHub Pages
 
 See the step-by-step walkthrough provided separately, or follow the short version:
