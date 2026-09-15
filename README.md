@@ -87,3 +87,5 @@ See the step-by-step walkthrough provided separately, or follow the short versio
 3. From this folder: `git remote add origin <your-repo-url>` then `git push -u origin main`.
 4. In the repo on GitHub: **Settings → Pages → Source → Deploy from a branch → `main` / `/(root)`**.
 5. Your site goes live at `https://<your-username>.github.io/belonging-advisory-council/`.
+
+
