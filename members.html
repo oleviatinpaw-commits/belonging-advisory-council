@@ -34,11 +34,11 @@
   <div class="container">
     <span class="eyebrow" style="color:#ff6b7d;">2025&ndash;26 Term</span>
     <h1>Meet the council.</h1>
-    <p>Twelve students from across Smith's undergraduate and graduate programs, representing six majors and every class year. Click any member to see their profile and projects.</p>
+    <p>Eleven students from across Smith, spanning the classes of 2027, 2028, and 2029. Click any member to see their profile and projects.</p>
   </div>
 </div>
 
-<section>
+<section id="leaders-section">
   <div class="container">
     <div class="section-head">
       <div>
@@ -48,6 +48,7 @@
       </div>
     </div>
     <div class="members-grid" id="leaders-grid"></div>
+    <p class="members-note" id="leaders-empty">Task force leads for the 2025&ndash;26 term haven't been assigned yet. Set a member's <code>role</code> in <code>assets/js/data.js</code> and they'll move up into this section automatically.</p>
   </div>
 </section>
 
@@ -62,7 +63,7 @@
     <div class="members-grid" id="members-grid"></div>
 
     <div class="members-note">
-      <strong>Note for council members:</strong> this roster reflects the 2025&ndash;26 term as published on the official Smith School page. Bios are placeholders pending each member's review. To edit a name, bio, photo, task force, or leadership role, update <code>assets/js/data.js</code> &mdash; see the README for instructions.
+      <strong>Note for council members:</strong> this roster reflects the 2025&ndash;26 term. Majors, task force assignments, and bios are pending each member's own review &mdash; anything still marked <code>[needs update]</code> hasn't been confirmed by that member yet. To edit a name, bio, photo, task force, or leadership role, update <code>assets/js/data.js</code> &mdash; see the README for instructions.
     </div>
   </div>
 </section>
@@ -110,5 +111,14 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/members.js"></script>
+<script>
+  // Hide the "no leads yet" note as soon as anyone has a role set in data.js.
+  (function () {
+    var empty = document.getElementById('leaders-empty');
+    if (empty && typeof LEADERS !== 'undefined' && LEADERS.length > 0) {
+      empty.hidden = true;
+    }
+  })();
+</script>
 </body>
 </html>
