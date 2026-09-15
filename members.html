@@ -112,10 +112,10 @@
 <script src="assets/js/data.js"></script>
 <script src="assets/js/members.js"></script>
 <script>
-  // Hide the "no leads yet" note as soon as anyone has a role set in data.js.
+  // Hide the "no leads yet" note as soon as anyone has leader: true in data.js.
   (function () {
     var empty = document.getElementById('leaders-empty');
-    if (empty && typeof LEADERS !== 'undefined' && LEADERS.length > 0) {
+    if (empty && typeof MEMBERS !== 'undefined' && MEMBERS.some(function (m) { return m.leader; })) {
       empty.hidden = true;
     }
   })();
