@@ -18,16 +18,21 @@
                  if they don't have one — the page will then print
                  "[needs update]" so it's obvious what's still missing.
 
+   If you upload photos to a different folder, change PHOTO_DIR below
+   and every path updates at once.
+
    Anything left empty renders as [needs update] on the live page.
    That's intentional: it makes the gaps visible instead of hiding them.
    ============================================================= */
+
+const PHOTO_DIR = "assets/img/members/";
 
 const MEMBERS = [
   {
     id: "donovan-wayman",
     name: "Donovan Wayman",
     gradYear: "2027",
-    photo: "assets/img/members/donovan-wayman.jpg",
+    photo: PHOTO_DIR + "donavon.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -37,7 +42,7 @@ const MEMBERS = [
     id: "rachael-chavez",
     name: "Rachael Chavez",
     gradYear: "2029",
-    photo: "assets/img/members/rachael-chavez.jpg",
+    photo: PHOTO_DIR + "rachael.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -47,7 +52,7 @@ const MEMBERS = [
     id: "matheus-cali",
     name: "Matheus Cali",
     gradYear: "2029",
-    photo: "assets/img/members/matheus-cali.jpg",
+    photo: PHOTO_DIR + "matheus.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -57,7 +62,7 @@ const MEMBERS = [
     id: "gabrielle-annan",
     name: "Gabrielle Annan",
     gradYear: "2028",
-    photo: "assets/img/members/gabrielle-annan.jpg",
+    photo: PHOTO_DIR + "gabrielle.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -67,7 +72,7 @@ const MEMBERS = [
     id: "arielle-francis",
     name: "Arielle Francis",
     gradYear: "2028",
-    photo: "assets/img/members/arielle-francis.jpg",
+    photo: PHOTO_DIR + "arielle.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -77,7 +82,7 @@ const MEMBERS = [
     id: "javier-coleman",
     name: "Javier Coleman",
     gradYear: "2027",
-    photo: "assets/img/members/javier-coleman.jpg",
+    photo: PHOTO_DIR + "javi.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -87,7 +92,7 @@ const MEMBERS = [
     id: "yume-tanaka",
     name: "Yume Tanaka",
     gradYear: "2027",
-    photo: "assets/img/members/yume-tanaka.jpg",
+    photo: PHOTO_DIR + "yume.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -97,7 +102,7 @@ const MEMBERS = [
     id: "ibhade-akhabue",
     name: "Ibhade Akhabue",
     gradYear: "2027",
-    photo: "assets/img/members/ibhade-akhabue.jpg",
+    photo: PHOTO_DIR + "ibhade.jpeg",
     majors: [],
     taskForce: "",
     role: null,
@@ -107,7 +112,7 @@ const MEMBERS = [
     id: "kairy-castro-barrios",
     name: "Kairy Castro-Barrios",
     gradYear: "2027",
-    photo: "assets/img/members/kairy-castro-barrios.jpg",
+    photo: PHOTO_DIR + "kairy.png",
     majors: [],
     taskForce: "",
     role: null,
@@ -117,7 +122,7 @@ const MEMBERS = [
     id: "martha-onyilokwu",
     name: "Martha Onyilokwu",
     gradYear: "May 2028",
-    photo: "assets/img/members/martha-onyilokwu.jpg",
+    photo: PHOTO_DIR + "mathao.png",
     majors: [],
     taskForce: "",
     role: null,
@@ -127,7 +132,7 @@ const MEMBERS = [
     id: "dylan-barnes",
     name: "Dylan Barnes",
     gradYear: "2027",
-    photo: "assets/img/members/dylan-barnes.jpg",
+    photo: PHOTO_DIR + "dylanbarnes.jpeg",
     majors: [],
     taskForce: "",
     role: null,
