@@ -545,7 +545,12 @@ button.member-card:focus-visible {
   margin-bottom: 0;
   flex-shrink: 0;
 }
-img.avatar, img.avatar-lg { object-fit: cover; }
+
+/* Photo avatars: override flex from .avatar so <img> renders correctly */
+img.avatar, img.avatar-lg {
+  object-fit: cover;
+  display: block;
+}
 
 /* ---------- Modal ---------- */
 
