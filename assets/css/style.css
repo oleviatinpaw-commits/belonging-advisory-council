@@ -382,6 +382,7 @@ section { padding: 88px 0; }
   object-fit: cover;
   display: block;
 }
+
 .member-name {
   font-family: var(--serif);
   font-weight: 600;
@@ -556,6 +557,7 @@ button.member-card:focus-visible {
   margin-bottom: 0;
   flex-shrink: 0;
 }
+
 /* ---------- Modal ---------- */
 
 body.modal-open { overflow: hidden; }
@@ -855,6 +857,7 @@ body.modal-open { overflow: hidden; }
   border-bottom: 1px solid var(--gray-300);
   gap: 16px;
 }
+
 /* ---------- Project card: no-image variant ---------- */
 
 .proj-banner {
